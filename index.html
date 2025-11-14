@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Magic Edition - Where Magic Meets Future</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-orb">
+            <div class="orb-core"></div>
+            <div class="orb-ring orb-ring-1"></div>
+            <div class="orb-ring orb-ring-2"></div>
+            <div class="orb-ring orb-ring-3"></div>
+        </div>
+        <div class="loading-runes">
+            <span class="rune">⚡</span>
+            <span class="rune">🌀</span>
+            <span class="rune">✨</span>
+            <span class="rune">🔮</span>
+            <span class="rune">⚔️</span>
+            <span class="rune">🧿</span>
+        </div>
+        <div class="loading-text">Summoning Digital Magic...</div>
+        <div class="portal-effect"></div>
+    </div>
+
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress"></div>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+    <div class="cursor-particles"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-orb"></div>
+                <span class="logo-text">Magic Tech</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#hero" class="nav-link">Realm</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Spellbook</a></li>
+                <li><a href="#projects" class="nav-link">Artifacts</a></li>
+                <li><a href="#contact" class="nav-link">Portal</a></li>
+            </ul>
+            <a href="#" class="resume-download-btn" id="resumeDownload">
+                <span>Resume</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+            </a>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-background">
+            <div class="particle-layer"></div>
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-3d-orb">
+                <div class="floating-orb">
+                    <div class="orb-inner"></div>
+                    <div class="glyph-ring ring-1">
+                        <span class="glyph">⚡</span>
+                        <span class="glyph">🌀</span>
+                        <span class="glyph">✨</span>
+                        <span class="glyph">🔮</span>
+                    </div>
+                    <div class="glyph-ring ring-2">
+                        <span class="glyph">⚔️</span>
+                        <span class="glyph">🧿</span>
+                        <span class="glyph">🌟</span>
+                        <span class="glyph">💫</span>
+                    </div>
+                    <div class="plasma-energy"></div>
+                    <div class="cosmic-dust"></div>
+                </div>
+            </div>
+            <h1 class="hero-title">
+                <span class="title-line">Where Magic</span>
+                <span class="title-line">Meets Future.</span>
+            </h1>
+            <p class="hero-subtitle">
+                I create digital experiences powered by neon energy, cosmic imagination, and next-generation technology.
+            </p>
+            <div class="hero-cta">
+                <button class="cta-button primary" onclick="document.querySelector('#projects').scrollIntoView({behavior: 'smooth'})">
+                    <span class="button-text">Enter My Realm</span>
+                    <span class="button-glow"></span>
+                </button>
+                <button class="cta-button secondary" onclick="document.querySelector('#projects').scrollIntoView({behavior: 'smooth'})">
+                    <span class="button-text">Summon My Work</span>
+                    <span class="button-glow"></span>
+                </button>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
+            <span>Scroll to Explore</span>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="about">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-accent">Beyond the Ordinary…</span>
+                    <span class="title-main">Into the Magical Digital Realm.</span>
+                </h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-body">
+                        I'm a creator who blends futuristic technology with mystical visual storytelling.
+                        My work transforms ideas into holographic illusions, neon-lit interfaces, and immersive digital worlds.
+                        Every project I make feels alive — powered by motion, energy, and imagination.
+                    </p>
+                    <div class="about-highlights">
+                        <div class="highlight-card">
+                            <div class="highlight-icon">✨</div>
+                            <div class="highlight-content">
+                                <h3>3+ Years</h3>
+                                <p>Crafting digital magic</p>
+                            </div>
+                        </div>
+                        <div class="highlight-card">
+                            <div class="highlight-icon">🚀</div>
+                            <div class="highlight-content">
+                                <h3>2026 UI Trends</h3>
+                                <p>Futuristic specialization</p>
+                            </div>
+                        </div>
+                        <div class="highlight-card">
+                            <div class="highlight-icon">🌀</div>
+                            <div class="highlight-content">
+                                <h3>Immersive Animations</h3>
+                                <p>Expert motion wizardry</p>
+                            </div>
+                        </div>
+                        <div class="highlight-card">
+                            <div class="highlight-icon">🌌</div>
+                            <div class="highlight-content">
+                                <h3>Sci-Fi & Mystic</h3>
+                                <p>Cosmic art lover</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Counter Section -->
+    <section id="stats" class="stats">
+        <div class="section-container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">🚀</div>
+                    <div class="stat-number" data-target="50">0</div>
+                    <div class="stat-label">Projects Completed</div>
+                    <div class="stat-glow"></div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">👥</div>
+                    <div class="stat-number" data-target="30">0</div>
+                    <div class="stat-label">Happy Clients</div>
+                    <div class="stat-glow"></div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">⭐</div>
+                    <div class="stat-number" data-target="3">0</div>
+                    <div class="stat-label">Years Experience</div>
+                    <div class="stat-glow"></div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🏆</div>
+                    <div class="stat-number" data-target="15">0</div>
+                    <div class="stat-label">Awards Won</div>
+                    <div class="stat-glow"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">My Spellbook of Skills</h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">🎨</div>
+                    <h3 class="skill-title">UI/UX Conjuring</h3>
+                    <p class="skill-description">Creating interfaces that feel alive, responsive, enchanted.</p>
+                    <div class="skill-glow"></div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">⚡</div>
+                    <h3 class="skill-title">Motion Wizardry</h3>
+                    <p class="skill-description">Animations powered by light, energy, and physics.</p>
+                    <div class="skill-glow"></div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🔮</div>
+                    <h3 class="skill-title">3D Hologram Crafting</h3>
+                    <p class="skill-description">Designing futuristic objects with depth & magic.</p>
+                    <div class="skill-glow"></div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🌐</div>
+                    <h3 class="skill-title">Web Sorcery</h3>
+                    <p class="skill-description">Crafting smooth, ultra-responsive digital worlds.</p>
+                    <div class="skill-glow"></div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🤖</div>
+                    <h3 class="skill-title">AI Art Enchantment</h3>
+                    <p class="skill-description">Generating visuals using neural magic & prompt mastery.</p>
+                    <div class="skill-glow"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section id="tech-stack" class="tech-stack">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Technologies I Master</h2>
+            </div>
+            <div class="tech-grid">
+                <div class="tech-item" data-tech="HTML5">
+                    <div class="tech-icon">HTML</div>
+                    <div class="tech-name">HTML5</div>
+                    <div class="tech-glow"></div>
+                </div>
+                <div class="tech-item" data-tech="CSS3">
+                    <div class="tech-icon">CSS</div>
+                    <div class="tech-name">CSS3</div>
+                    <div class="tech-glow"></div>
+                </div>
+                <div class="tech-item" data-tech="JavaScript">
+                    <div class="tech-icon">JS</div>
+                    <div class="tech-name">JavaScript</div>
+                    <div class="tech-glow"></div>
+                </div>
+                <div class="tech-item" data-tech="React">
+                    <div class="tech-icon">⚛️</div>
+                    <div class="tech-name">React</div>
+                    <div class="tech-glow"></div>
+                </div>
+                <div class="tech-item" data-tech="Vue">
+                    <div class="tech-icon">Vue</div>
+                    <div class="tech-name">Vue.js</div>
+                    <div class="tech-glow"></div>
+                </div>
+                <div class="tech-item" data-tech="Node">
+                    <div class="tech-icon">Node</div>
+                    <div class="tech-name">Node.js</div>
+                    <div class="tech-glow"></div>
+                </div>
+                <div class="tech-item" data-tech="Python">
+                    <div class="tech-icon">Py</div>
+                    <div class="tech-name">Python</div>
+                    <div class="tech-glow"></div>
+                </div>
+                <div class="tech-item" data-tech="Figma">
+                    <div class="tech-icon">Figma</div>
+                    <div class="tech-name">Figma</div>
+                    <div class="tech-glow"></div>
+                </div>
+                <div class="tech-item" data-tech="Three.js">
+                    <div class="tech-icon">3D</div>
+                    <div class="tech-name">Three.js</div>
+                    <div class="tech-glow"></div>
+                </div>
+                <div class="tech-item" data-tech="GSAP">
+                    <div class="tech-icon">GSAP</div>
+                    <div class="tech-name">GSAP</div>
+                    <div class="tech-glow"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience/Timeline Section -->
+    <section id="experience" class="experience">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">My Journey Through Time</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2024 - Present</div>
+                        <h3 class="timeline-title">Senior Digital Magician</h3>
+                        <p class="timeline-description">Leading futuristic UI/UX projects, crafting immersive experiences with cutting-edge technologies and magical design principles.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2022 - 2024</div>
+                        <h3 class="timeline-title">Creative Technologist</h3>
+                        <p class="timeline-description">Blending art and technology to create stunning visual experiences. Specialized in motion design and 3D interfaces.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2021 - 2022</div>
+                        <h3 class="timeline-title">Frontend Sorcerer</h3>
+                        <p class="timeline-description">Mastered the art of web development, creating responsive and interactive digital experiences.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2020 - 2021</div>
+                        <h3 class="timeline-title">Digital Apprentice</h3>
+                        <p class="timeline-description">Began the magical journey into digital creation, learning the fundamentals of design and development.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Artifacts I Have Created</h2>
+            </div>
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+                <button class="filter-btn" data-filter="ui">UI/UX</button>
+                <button class="filter-btn" data-filter="3d">3D</button>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card" data-category="web" data-modal="project1">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="holographic-pattern"></div>
+                            <div class="neon-pulse"></div>
+                        </div>
+                        <div class="project-glow"></div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Neon Spirit Dashboard</h3>
+                        <p class="project-description">
+                            A holographic data dashboard with glowing runes, neon pulses, and floating glass panels. 
+                            The interface reacts to cursor energy and animates like a living organism.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Holographic UI</span>
+                            <span class="tag">Neon Design</span>
+                            <span class="tag">Interactive</span>
+                        </div>
+                        <button class="project-view-btn">View Details</button>
+                    </div>
+                </div>
+                <div class="project-card" data-category="web" data-modal="project2">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="holographic-pattern"></div>
+                            <div class="neon-pulse"></div>
+                        </div>
+                        <div class="project-glow"></div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Quantum Portfolio</h3>
+                        <p class="project-description">
+                            A 2026-style futuristic portfolio built with parallax realms, portal transitions, 
+                            magical particles, and dynamic neon lighting.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Parallax</span>
+                            <span class="tag">Portal FX</span>
+                            <span class="tag">2026 Style</span>
+                        </div>
+                        <button class="project-view-btn">View Details</button>
+                    </div>
+                </div>
+                <div class="project-card" data-category="ui" data-modal="project3">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="holographic-pattern"></div>
+                            <div class="neon-pulse"></div>
+                        </div>
+                        <div class="project-glow"></div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Cosmic Interface System</h3>
+                        <p class="project-description">
+                            An advanced UI component library featuring floating panels, energy-based interactions, 
+                            and adaptive layouts that respond to user intent.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">UI Library</span>
+                            <span class="tag">Components</span>
+                            <span class="tag">Design System</span>
+                        </div>
+                        <button class="project-view-btn">View Details</button>
+                    </div>
+                </div>
+                <div class="project-card" data-category="3d" data-modal="project4">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="holographic-pattern"></div>
+                            <div class="neon-pulse"></div>
+                        </div>
+                        <div class="project-glow"></div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Holographic Realm Explorer</h3>
+                        <p class="project-description">
+                            An immersive 3D web experience where users navigate through cosmic dimensions, 
+                            interacting with floating holograms and magical portals.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">3D Web</span>
+                            <span class="tag">WebGL</span>
+                            <span class="tag">Immersive</span>
+                        </div>
+                        <button class="project-view-btn">View Details</button>
+                    </div>
+                </div>
+                <div class="project-card" data-category="web" data-modal="project5">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="holographic-pattern"></div>
+                            <div class="neon-pulse"></div>
+                        </div>
+                        <div class="project-glow"></div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Neural Network Visualizer</h3>
+                        <p class="project-description">
+                            A real-time AI visualization tool that displays neural network architectures 
+                            as glowing energy webs with interactive node exploration.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">AI/ML</span>
+                            <span class="tag">Visualization</span>
+                            <span class="tag">Interactive</span>
+                        </div>
+                        <button class="project-view-btn">View Details</button>
+                    </div>
+                </div>
+                <div class="project-card" data-category="ui" data-modal="project6">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="holographic-pattern"></div>
+                            <div class="neon-pulse"></div>
+                        </div>
+                        <div class="project-glow"></div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Mystic Mobile App</h3>
+                        <p class="project-description">
+                            A mobile application with gesture-based magic interactions, 
+                            particle effects, and fluid animations that feel like casting spells.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Mobile</span>
+                            <span class="tag">Gestures</span>
+                            <span class="tag">Animations</span>
+                        </div>
+                        <button class="project-view-btn">View Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Voices from the Digital Realm</h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">"</div>
+                    <p class="testimonial-text">
+                        Working with this magical creator transformed our vision into a stunning reality. 
+                        The attention to detail and futuristic approach exceeded all expectations.
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">🌟</div>
+                        <div class="author-info">
+                            <h4 class="author-name">Sarah Quantum</h4>
+                            <p class="author-role">CEO, TechVisions Inc.</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-glow"></div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">"</div>
+                    <p class="testimonial-text">
+                        The most innovative and visually stunning work I've ever seen. 
+                        Every interaction feels like magic, and the user experience is absolutely flawless.
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">✨</div>
+                        <div class="author-info">
+                            <h4 class="author-name">Marcus Stellar</h4>
+                            <p class="author-role">Creative Director, Neon Labs</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-glow"></div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">"</div>
+                    <p class="testimonial-text">
+                        A true master of digital sorcery. The combination of cutting-edge tech 
+                        and mystical design creates experiences that are truly unforgettable.
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">🔮</div>
+                        <div class="author-info">
+                            <h4 class="author-name">Luna Mystic</h4>
+                            <p class="author-role">Founder, Cosmic Creations</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-glow"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Open a Portal to Reach Me</h2>
+                <p class="contact-intro">
+                    Send your message through the digital gateway. I'll respond with the speed of light and the precision of magic.
+                </p>
+            </div>
+            <div class="contact-form-container">
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Your Name</label>
+                        <input type="text" id="name" name="name" class="form-input" required>
+                        <div class="input-glow"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="form-label">Your Email</label>
+                        <input type="email" id="email" name="email" class="form-input" required>
+                        <div class="input-glow"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message" class="form-label">Your Message</label>
+                        <textarea id="message" name="message" class="form-input form-textarea" rows="5" required></textarea>
+                        <div class="input-glow"></div>
+                    </div>
+                    <button type="submit" class="submit-button">
+                        <span class="button-text">Send the Spell</span>
+                        <span class="button-glow"></span>
+                        <span class="button-particles"></span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Sidebar -->
+    <div class="social-sidebar">
+        <a href="#" class="social-link" aria-label="LinkedIn">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+            </svg>
+        </a>
+        <a href="#" class="social-link" aria-label="GitHub">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+            </svg>
+        </a>
+        <a href="#" class="social-link" aria-label="Twitter">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/>
+            </svg>
+        </a>
+        <a href="#" class="social-link" aria-label="Instagram">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            </svg>
+        </a>
+        <a href="#" class="social-link" aria-label="Dribbble">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 24c-6.627 0-12-5.373-12-12s5.373-12 12-12 12 5.373 12 12-5.373 12-12 12zm10.12-10.358c-.35-.11-3.17-.953-6.384-.438 1.343 3.684 1.762 6.726 1.762 8.771 2.984-1.813 4.949-4.62 4.622-8.333zm-6.115 7.808c-.153-.9-.75-4.032-1.857-7.77-.519 2.492-.583 5.953-.22 9.202.564.977 1.077 1.568 2.077 1.568 1.073 0 1.865-.742 2.076-1.514-.122-.655-.397-2.207-1.066-1.486zm-3.864-15.974c-2.05.693-3.76 2.027-5.493 3.332 1.794.602 3.591 1.726 5.355 3.386-.573-2.589-.988-5.161-1.356-7.521-.17-.412-.287-.836-.406-1.197zm-5.442 17.8c1.266.902 2.78 1.57 4.458 1.902-.516-3.023-.672-6.68-.221-10.833-1.693-2.438-2.525-5.123-2.673-7.775-1.18 2.213-1.816 4.824-1.816 7.498 0 3.198.698 6.225 1.802 9.208zm11.129-19.995c-.246-.858-.684-1.4-1.329-1.4-.494 0-.927.203-1.249.545-.214.245-.405.554-.535.958-2.791 5.543-3.178 11.31-1.098 15.205.506.93 1.275 1.633 2.208 1.884 1.097.301 2.128.043 2.963-.703.574-.51.976-1.213 1.135-1.985.209-1.017-.156-2.255-.479-3.236-.322-.981-1.278-1.637-1.278-1.637l1.372-8.727zm-1.688 6.01c.564.322 1.937 1.435 2.069 2.017.121.514-.107.991-.303 1.388-.493.998-1.187 1.833-1.92 2.4 1.304-2.213 1.785-4.77 1.154-7.197-.231-.897-.638-1.035-1.04-1.035-.336 0-.644.19-.804.477-.416.762-1.4 2.142-2.047 3.869-.709 1.893-.942 3.716-.363 5.522.291.912.725 1.735 1.291 2.441.681-4.626 2.366-8.785 4.812-11.74.396-.495.842-.784 1.299-.784.315 0 .625.105.857.292.464.37.78.99.632 1.692z"/>
+            </svg>
+        </a>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 15l-6-6-6 6"/>
+        </svg>
+    </button>
+
+    <!-- Project Modals -->
+    <div class="project-modal" id="projectModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close modal">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <div class="modal-body">
+                <div class="modal-image"></div>
+                <h2 class="modal-title"></h2>
+                <p class="modal-description"></p>
+                <div class="modal-tags"></div>
+                <div class="modal-links">
+                    <a href="#" class="modal-link-btn" target="_blank">Live Demo</a>
+                    <a href="#" class="modal-link-btn secondary" target="_blank">View Code</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Portfolio Magic Edition. Crafted with cosmic energy and digital magic.</p>
+            <div class="footer-social">
+                <a href="#" class="footer-social-link" aria-label="LinkedIn">LinkedIn</a>
+                <a href="#" class="footer-social-link" aria-label="GitHub">GitHub</a>
+                <a href="#" class="footer-social-link" aria-label="Twitter">Twitter</a>
+                <a href="#" class="footer-social-link" aria-label="Instagram">Instagram</a>
+            </div>
+            <div class="footer-particles"></div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

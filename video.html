@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Spirit Dashboard - Video Showcase</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --neon-violet: #a855f7;
+            --neon-violet-glow: #c084fc;
+            --holographic-cyan: #06b6d4;
+            --holographic-cyan-glow: #22d3ee;
+            --plasma-pink: #ec4899;
+            --plasma-pink-glow: #f472b6;
+            --deep-space-navy: #0f172a;
+            --deep-space-navy-light: #1e293b;
+            --gradient-primary: linear-gradient(135deg, var(--neon-violet), var(--holographic-cyan), var(--plasma-pink));
+            --glow-violet: 0 0 20px rgba(168, 85, 247, 0.5), 0 0 40px rgba(168, 85, 247, 0.3);
+            --glow-cyan: 0 0 20px rgba(6, 182, 212, 0.5), 0 0 40px rgba(6, 182, 212, 0.3);
+            --glow-pink: 0 0 20px rgba(236, 72, 153, 0.5), 0 0 40px rgba(236, 72, 153, 0.3);
+            --font-primary: 'Orbitron', sans-serif;
+            --font-secondary: 'Rajdhani', sans-serif;
+        }
+
+        body {
+            font-family: var(--font-secondary);
+            background: var(--deep-space-navy);
+            color: #fff;
+            overflow-x: hidden;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        /* Animated Background */
+        .background-effects {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .gradient-orb {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: 0.3;
+            animation: float 20s ease-in-out infinite;
+        }
+
+        .orb-1 {
+            background: var(--neon-violet);
+            top: -200px;
+            left: -200px;
+            animation-delay: 0s;
+        }
+
+        .orb-2 {
+            background: var(--holographic-cyan);
+            bottom: -200px;
+            right: -200px;
+            animation-delay: 5s;
+        }
+
+        .orb-3 {
+            background: var(--plasma-pink);
+            top: 50%;
+            right: -150px;
+            animation-delay: 10s;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translate(0, 0) scale(1);
+            }
+            33% {
+                transform: translate(50px, 50px) scale(1.1);
+            }
+            66% {
+                transform: translate(-50px, -50px) scale(0.9);
+            }
+        }
+
+        /* Main Container */
+        .video-container {
+            position: relative;
+            z-index: 1;
+            width: 90%;
+            max-width: 1200px;
+            padding: 40px;
+        }
+
+        /* Header */
+        .video-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .video-title {
+            font-family: var(--font-primary);
+            font-size: 3.5rem;
+            font-weight: 900;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            animation: glow-pulse 3s ease-in-out infinite;
+        }
+
+        .video-subtitle {
+            font-size: 1.2rem;
+            color: var(--holographic-cyan-glow);
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+
+        @keyframes glow-pulse {
+            0%, 100% {
+                filter: drop-shadow(0 0 10px rgba(168, 85, 247, 0.5));
+            }
+            50% {
+                filter: drop-shadow(0 0 30px rgba(168, 85, 247, 0.8));
+            }
+        }
+
+        /* Video Player Wrapper */
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16/9;
+            background: rgba(15, 23, 42, 0.8);
+            border: 3px solid transparent;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--glow-violet), var(--glow-cyan);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .video-wrapper:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 50px rgba(168, 85, 247, 0.6), 0 0 80px rgba(6, 182, 212, 0.4);
+        }
+
+        /* Video Element */
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Play Button Overlay */
+        .play-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(15, 23, 42, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+        }
+
+        .play-overlay.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .play-button {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: var(--gradient-primary);
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            position: relative;
+            transition: all 0.3s ease;
+            box-shadow: var(--glow-violet), var(--glow-cyan), var(--glow-pink);
+            animation: pulse-play 2s ease-in-out infinite;
+        }
+
+        .play-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 60px rgba(168, 85, 247, 0.8), 0 0 100px rgba(6, 182, 212, 0.6);
+        }
+
+        .play-button::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: var(--gradient-primary);
+            opacity: 0.5;
+            animation: ripple 2s ease-out infinite;
+        }
+
+        @keyframes pulse-play {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        @keyframes ripple {
+            0% {
+                transform: scale(1);
+                opacity: 0.5;
+            }
+            100% {
+                transform: scale(1.5);
+                opacity: 0;
+            }
+        }
+
+        .play-icon {
+            width: 0;
+            height: 0;
+            border-left: 40px solid #fff;
+            border-top: 25px solid transparent;
+            border-bottom: 25px solid transparent;
+            margin-left: 8px;
+            filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
+        }
+
+        /* Video Controls */
+        .video-controls {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(15, 23, 42, 0.95), transparent);
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .video-wrapper:hover .video-controls {
+            opacity: 1;
+        }
+
+        .control-btn {
+            background: rgba(168, 85, 247, 0.2);
+            border: 2px solid var(--neon-violet);
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: var(--font-secondary);
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .control-btn:hover {
+            background: var(--gradient-primary);
+            box-shadow: var(--glow-violet);
+            transform: translateY(-2px);
+        }
+
+        .progress-bar {
+            flex: 1;
+            height: 6px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 3px;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: var(--gradient-primary);
+            border-radius: 3px;
+            width: 0%;
+            transition: width 0.1s linear;
+            box-shadow: 0 0 10px rgba(168, 85, 247, 0.6);
+        }
+
+        /* Back Button */
+        .back-button {
+            position: fixed;
+            top: 30px;
+            left: 30px;
+            z-index: 100;
+            background: rgba(168, 85, 247, 0.1);
+            border: 2px solid var(--neon-violet);
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: var(--font-secondary);
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .back-button:hover {
+            background: var(--gradient-primary);
+            box-shadow: var(--glow-violet);
+            transform: translateX(-5px);
+        }
+
+        .back-button::before {
+            content: '←';
+            font-size: 18px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .video-title {
+                font-size: 2rem;
+            }
+
+            .play-button {
+                width: 80px;
+                height: 80px;
+            }
+
+            .play-icon {
+                border-left-width: 25px;
+                border-top-width: 15px;
+                border-bottom-width: 15px;
+                margin-left: 5px;
+            }
+
+            .video-container {
+                padding: 20px;
+            }
+
+            .back-button {
+                top: 15px;
+                left: 15px;
+                padding: 10px 16px;
+                font-size: 12px;
+            }
+        }
+
+        /* Loading State */
+        .loading-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: var(--font-primary);
+            font-size: 1.2rem;
+            color: var(--holographic-cyan-glow);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .loading-text.show {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="background-effects">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+    </div>
+
+    <!-- Back Button -->
+    <a href="index.html" class="back-button">Back to Portfolio</a>
+
+    <!-- Main Container -->
+    <div class="video-container">
+        <!-- Header -->
+        <div class="video-header">
+            <h1 class="video-title">Neon Spirit Dashboard</h1>
+            <p class="video-subtitle">A Holographic Data Dashboard Experience</p>
+        </div>
+
+        <!-- Video Player -->
+        <div class="video-wrapper">
+            <video id="videoPlayer" preload="metadata">
+                <source src="Neon Spirit Dashboard.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+            <!-- Play Overlay -->
+            <div class="play-overlay" id="playOverlay">
+                <div class="play-button" id="playButton">
+                    <div class="play-icon"></div>
+                </div>
+            </div>
+
+            <!-- Video Controls -->
+            <div class="video-controls">
+                <button class="control-btn" id="playPauseBtn">Play</button>
+                <div class="progress-bar" id="progressBar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <button class="control-btn" id="fullscreenBtn">Fullscreen</button>
+            </div>
+
+            <!-- Loading Text -->
+            <div class="loading-text" id="loadingText">Loading...</div>
+        </div>
+    </div>
+
+    <script>
+        const video = document.getElementById('videoPlayer');
+        const playOverlay = document.getElementById('playOverlay');
+        const playButton = document.getElementById('playButton');
+        const playPauseBtn = document.getElementById('playPauseBtn');
+        const progressBar = document.getElementById('progressBar');
+        const progressFill = document.getElementById('progressFill');
+        const fullscreenBtn = document.getElementById('fullscreenBtn');
+        const loadingText = document.getElementById('loadingText');
+
+        // Show loading
+        video.addEventListener('loadstart', () => {
+            loadingText.classList.add('show');
+        });
+
+        // Hide loading when video can play
+        video.addEventListener('canplay', () => {
+            loadingText.classList.remove('show');
+        });
+
+        // Play button click
+        playButton.addEventListener('click', () => {
+            video.play();
+            playOverlay.classList.add('hidden');
+            playPauseBtn.textContent = 'Pause';
+        });
+
+        // Play overlay click
+        playOverlay.addEventListener('click', (e) => {
+            if (e.target === playOverlay) {
+                video.play();
+                playOverlay.classList.add('hidden');
+                playPauseBtn.textContent = 'Pause';
+            }
+        });
+
+        // Play/Pause button
+        playPauseBtn.addEventListener('click', () => {
+            if (video.paused) {
+                video.play();
+                playPauseBtn.textContent = 'Pause';
+                playOverlay.classList.add('hidden');
+            } else {
+                video.pause();
+                playPauseBtn.textContent = 'Play';
+            }
+        });
+
+        // Video ended - show play overlay again
+        video.addEventListener('ended', () => {
+            playOverlay.classList.remove('hidden');
+            playPauseBtn.textContent = 'Play';
+        });
+
+        // Update progress bar
+        video.addEventListener('timeupdate', () => {
+            const progress = (video.currentTime / video.duration) * 100;
+            progressFill.style.width = progress + '%';
+        });
+
+        // Click on progress bar to seek
+        progressBar.addEventListener('click', (e) => {
+            const rect = progressBar.getBoundingClientRect();
+            const pos = (e.clientX - rect.left) / rect.width;
+            video.currentTime = pos * video.duration;
+        });
+
+        // Fullscreen button
+        fullscreenBtn.addEventListener('click', () => {
+            if (!document.fullscreenElement) {
+                video.requestFullscreen().catch(err => {
+                    alert('Error attempting to enable fullscreen: ' + err.message);
+                });
+            } else {
+                document.exitFullscreen();
+            }
+        });
+
+        // Keyboard controls
+        document.addEventListener('keydown', (e) => {
+            if (e.code === 'Space') {
+                e.preventDefault();
+                if (video.paused) {
+                    video.play();
+                    playOverlay.classList.add('hidden');
+                    playPauseBtn.textContent = 'Pause';
+                } else {
+                    video.pause();
+                    playPauseBtn.textContent = 'Play';
+                }
+            } else if (e.code === 'ArrowLeft') {
+                video.currentTime -= 10;
+            } else if (e.code === 'ArrowRight') {
+                video.currentTime += 10;
+            } else if (e.code === 'KeyF') {
+                if (!document.fullscreenElement) {
+                    video.requestFullscreen();
+                } else {
+                    document.exitFullscreen();
+                }
+            }
+        });
+
+        // Show controls on video hover
+        let controlsTimeout;
+        video.addEventListener('mousemove', () => {
+            const controls = document.querySelector('.video-controls');
+            controls.style.opacity = '1';
+            clearTimeout(controlsTimeout);
+            controlsTimeout = setTimeout(() => {
+                if (!video.paused) {
+                    controls.style.opacity = '0';
+                }
+            }, 3000);
+        });
+    </script>
+</body>
+</html>
+
+
